@@ -1,0 +1,43 @@
+{
+    "name": "sqlnaut",
+    "displayName": "SQLNaut",
+    "description": "SQLNaut is a Local SQL Writing Assistant",
+    "icon": "",
+    "version": "0.0.1",
+    "publisher": "cognite-analytics",
+    "license": "GPL-3.0",
+    "homepage": "",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cognite-analytics/sqlnaut"
+    },
+    "bugs": {
+        "url": "https://github.com/cognite-analytics/sqlnaut/issues"
+    },
+    "engines": {
+        "vscode": "^1.30.0"
+    },
+    "keybindings": [
+        {
+            "command": "sqlnaut.helloWorld",
+            "key": "ctrl+shift+e",
+            "when": "editorTextFocus"
+        }
+    ],
+    "languages": [
+        {
+            "id": "sql",
+            "aliases": [
+                "SQL",
+                "sql"
+            ],
+            "extensions": [
+                ".sql"
+            ],
+            "configuration": "./language-configuration.json"
+        }
+    ],
+    "hoverProvider": true,
+    "completionProvider": true,
+    "codeActions": true
+}
