@@ -1,43 +1,41 @@
 {
-    "name": "sqlnaut",
-    "displayName": "SQLNaut",
-    "description": "SQLNaut is a Local SQL Writing Assistant",
-    "icon": "",
-    "version": "0.0.1",
-    "publisher": "cognite-analytics",
-    "license": "GPL-3.0",
-    "homepage": "",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/cognite-analytics/sqlnaut"
-    },
-    "bugs": {
-        "url": "https://github.com/cognite-analytics/sqlnaut/issues"
-    },
-    "engines": {
-        "vscode": "^1.30.0"
-    },
-    "keybindings": [
-        {
-            "command": "sqlnaut.helloWorld",
-            "key": "ctrl+shift+e",
-            "when": "editorTextFocus"
-        }
-    ],
-    "languages": [
-        {
-            "id": "sql",
-            "aliases": [
-                "SQL",
-                "sql"
-            ],
-            "extensions": [
-                ".sql"
-            ],
-            "configuration": "./language-configuration.json"
-        }
-    ],
-    "hoverProvider": true,
-    "completionProvider": true,
-    "codeActions": true
+  "name": "sqlnaut",
+  "displayName": "sqlnaut",
+  "description": "Local AI SQL Writing Assistant",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "sqlnaut.helloWorld",
+        "title": "Hello World"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.96.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.17.0",
+    "@typescript-eslint/parser": "^8.17.0",
+    "eslint": "^9.16.0",
+    "typescript": "^5.7.2",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
 }
