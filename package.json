@@ -14,8 +14,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "sqlnaut.helloWorld",
-        "title": "Hello World"
+        "command": "sqlnaut.openChat",
+        "title": "SQLChat"
       }
     ]
   },
