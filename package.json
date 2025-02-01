@@ -10,7 +10,7 @@
 		"url": "https://github.com/10Nates/squeel-autocoder/issues"
 	},
 	"sponsor": {
-		"url": "https://ko-fi.com/natehedge"
+		"url": "https://ko-fi.com/datalab"
 	},
 	"repository": {
 		"type": "git",
@@ -109,18 +109,27 @@
 				"command": "squeel-autocoder.autocomplete",
 				"title": "Autocomplete with Ollama"
 			},
-      {
-        "command": "squeel-autocoder.triggerAutocomplete",
-        "title": "Manual Autocomplete"
-      }
+			{
+				"command": "squeel-autocoder.triggerAutocomplete",
+				"title": "Manual Autocomplete"
+			},
+			{
+				"command": "squeel-autocoder.createEmbeddings",
+				"title": "Embed Codebase"
+			}
 		],
-    "keybindings": [
-      {
-        "command": "squeel-autocoder.triggerAutocomplete",
-        "key": "ctrl+u",
-        "mac": "cmd+u"
-      }
-    ]
+		"keybindings": [
+			{
+				"command": "squeel-autocoder.triggerAutocomplete",
+				"key": "ctrl+u",
+				"mac": "cmd+u"
+			},
+			{
+				"command": "squeel-autocoder.createEmbeddings",
+				"key": "ctrl+shift+u",
+				"mac": "cmd+shift+u"
+			}
+		]
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
